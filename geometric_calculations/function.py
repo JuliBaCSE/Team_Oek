@@ -1,7 +1,5 @@
 import numpy as np
 
-
-
 """
 definition of angles:
 
@@ -135,7 +133,7 @@ def compute_rad_per_roof(type, width, length, rad_hori, direction = None, height
         tilt = 0
         azimuth = 180 # indepent of direction assumed to be optimal -> 180
         rad_roof = get_radiation_from_area(rad_hori=rad_hori, direction=azimuth, tilt=tilt, area=area)
-        return rad_roof, None
+        return rad_roof/2, rad_roof/2
     
     # if gabled need scaled area
     elif type == "gabled":
